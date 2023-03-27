@@ -19,33 +19,21 @@ const sidebarInner = document.createElement('div');
 sidebarInner.classList.add('sidebar-inner');
 
 
-sidebarInner.innerHTML =`
+sidebarInner.innerHTML = `
                 <div class="sidebar-list">
                 <p class="title">Genre</p>
-            
-                <a href="./movie-list.html" menu-close class="sidebar-link">Action</a>
-            
-                <a href="./movie-list.html" menu-close class="sidebar-link">Horror</a>
-            
-                <a href="./movie-list.html" menu-close class="sidebar-link">Comedy</a>
-            
-                <a href="./movie-list.html" menu-close class="sidebar-link">Adventure</a>
-            
-                <a href="./movie-list.html" menu-close class="sidebar-link">Drama</a>
-            
-                <a href="./movie-list.html" menu-close class="sidebar-link">Sci-Fi</a>
             </div>
-            <!-- langauge option -->
+            
             <div class="sidebar-list">
                 <p class="title">Language</p>
             
-                <a href="./movie-list.html" menu-close class="sidebar-link">English</a>
+                <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_langauge=en", "English")'>English</a>
             
-                <a href="./movie-list.html" menu-close class="sidebar-link">French</a>
+                <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_langauge=fr", "French")'>French</a>
             
-                <a href="./movie-list.html" menu-close class="sidebar-link">Spanish</a>
+                <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_langauge=es", "Spanish")'>Spanish</a>
             
-                <a href="./movie-list.html" menu-close class="sidebar-link">Germany</a>
+                <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_langauge=de", "Germany")'>Germany</a>
             </div>
             
             <!-- sidebar footer -->
@@ -65,7 +53,7 @@ const genreLink = function() {
         link.classList.add("sidebar-link");
         link.setAttribute("href", "./movie-list.html");
         link.setAttribute("menu-close", "");
-        // link.setAttribute("onclick",`getMovieList("with_genres=${genreId}","${genreName}")`);
+        link.setAttribute("onclick",`getMovieList("with_genres=${genreId}","${genreName}")`);
         link.textContent = genreName;
 
         sidebarInner.querySelectorAll(".sidebar-list")[0]
