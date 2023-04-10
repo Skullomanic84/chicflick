@@ -425,7 +425,7 @@ body {
 
 .search-field:focus {
   box-shadow: 0 0 0 2px var(--on-surface);
-  padding-inline-start: 16px;
+  padding-inline-start: 26px;
 }
 
 .search-wrapper .leading-icon {
@@ -859,7 +859,7 @@ responsive for larger than 575px screen
 
     .banner-content {
       bottom: 50%;
-      transition: translateY(50%);
+      transform: translateY(50%);
       left: 50px;
     }
 
@@ -927,7 +927,7 @@ responsive for larger than 575px screen
         height: calc(100vh - 104px);
       }
 
-      sidebar.active {
+      .sidebar.active {
         transform: none;
       }
 
@@ -941,18 +941,20 @@ responsive for larger than 575px screen
         border-top-left-radius: var(--radius-36);
       }
 
-      .backdrop-image {
-        border-top-left-radius: var(--radius-36);
-      }
-
       .banner-content {
         left: 100px;
       }
-
+      
       .search-modal {
         top: 104px;
         padding: 60px;
       }
+
+      .backdrop-image {
+        border-top-left-radius: var(--radius-36);
+      }
+
+      
 
 
     }

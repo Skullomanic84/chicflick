@@ -7,7 +7,7 @@ import { createMovieCard } from "./movie-card.js";
 import { api_key, fetchDataFromServer } from "./api.js";
 
 
-export function createSearch(){
+export function search(){
     const searchWrapper = document.querySelector("[search-wrapper]");
     const searchField = document.querySelector("[search-field]");
     const searchResultModal = document.createElement("div");
